@@ -10,3 +10,11 @@ Den här klassen styrs genom `todo.done` state, i ett ternary villkor på varje 
 ## Tre steg när stil inte tar
 
 Spara filen -> kolla att `App.jsx` importerar CSS -> kolla att JSX taggarna har `className` egenskaper för klassnamnen i CSS filen -> använd konsolen i Dev Tools för att inspektera elementen och se klasserna.
+
+## Felsökning
+
+`className="completed` stavas exakt som `.completed` i CSS filen.
+
+Korrekt ordning i ternary villkoret: `t.done ? "todo completed" : "todo"`.
+
+Ingen CSS regel som är mer specifik eller kommer senare i filen än `.completed`.
